@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.pangao.vip/icp/cxl2020mc.github.io</loc>
+    
+    <lastmod>2021-02-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.pangao.vip/Perl%E9%80%92%E5%BD%92%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9/</loc>
     
     <lastmod>2021-02-04</lastmod>
@@ -373,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/Python3%E5%85%83%E7%BB%84-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
+    <loc>https://blog.pangao.vip/Python%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2021-02-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/Python%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85/</loc>
+    <loc>https://blog.pangao.vip/Python3%E5%85%83%E7%BB%84-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
     
     <lastmod>2021-02-04</lastmod>
     
@@ -774,20 +781,6 @@
 
   
   <url>
-    <loc>https://blog.pangao.vip/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</loc>
-    <lastmod>2021-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.pangao.vip/tags/Mac/</loc>
-    <lastmod>2021-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.pangao.vip/tags/HTML5%E6%9E%81%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
@@ -802,7 +795,21 @@
   </url>
   
   <url>
+    <loc>https://blog.pangao.vip/tags/Mac/</loc>
+    <lastmod>2021-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.pangao.vip/tags/Hexo/</loc>
+    <lastmod>2021-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -851,7 +858,7 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/dmg/</loc>
+    <loc>https://blog.pangao.vip/tags/Markdown/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -859,13 +866,6 @@
   
   <url>
     <loc>https://blog.pangao.vip/tags/NodeJs/</loc>
-    <lastmod>2021-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.pangao.vip/tags/Markdown/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -880,6 +880,13 @@
   
   <url>
     <loc>https://blog.pangao.vip/tags/Perl/</loc>
+    <lastmod>2021-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/tags/dmg/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -944,13 +951,6 @@
 
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Mac%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</loc>
-    <lastmod>2021-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.pangao.vip/categories/HTML5/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
@@ -966,6 +966,13 @@
   
   <url>
     <loc>https://blog.pangao.vip/categories/HTML5/HTML5%E6%9E%81%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2021-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/categories/Mac%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1042,14 +1049,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90/</loc>
+    <loc>https://blog.pangao.vip/categories/Python/Word/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/Word/</loc>
+    <loc>https://blog.pangao.vip/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
