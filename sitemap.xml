@@ -830,14 +830,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/JS/</loc>
+    <loc>https://blog.pangao.vip/tags/IT%E7%A4%BE%E5%8C%BA/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/IT%E7%A4%BE%E5%8C%BA/</loc>
+    <loc>https://blog.pangao.vip/tags/JS/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -865,14 +865,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/NodeJs/</loc>
+    <loc>https://blog.pangao.vip/tags/Markdown/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/Markdown/</loc>
+    <loc>https://blog.pangao.vip/tags/NodeJs/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1035,14 +1035,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Vue/</loc>
+    <loc>https://blog.pangao.vip/categories/Python/Excel/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90/</loc>
+    <loc>https://blog.pangao.vip/categories/Vue/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1056,7 +1056,7 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/Excel/</loc>
+    <loc>https://blog.pangao.vip/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
