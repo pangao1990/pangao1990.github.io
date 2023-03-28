@@ -85,7 +85,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -148,7 +148,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -334,7 +334,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          747 字
+          687 字
         
       </span>
     
@@ -438,14 +438,14 @@
 <p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/Mac%E6%89%93%E5%8C%85dmg%E6%96%87%E4%BB%B6(%E6%9B%B4%E6%8D%A2%E8%83%8C%E6%99%AF%E5%9B%BE)-9.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 </li>
 <li><p>隐藏背景图片，输入如下代码：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs awk">chflags hidden <span class="hljs-regexp">/Volumes/</span>未命名/bg-<span class="hljs-number"><code class="language-hljs awk">chflags hidden <span class="hljs-regexp">/Volumes/</span>未命名/bg-<span class="hljs-number">2</span>.png<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">chflags hidden <span class="hljs-regexp">/Volumes/</span>未命名/bg-<span class="hljs-number">2</span>.png<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>注意：<code>未命名</code> 换成步骤 2 中创建空白映像时自定义的 <code>名称</code></li>
 <li>注意：bg-2.png 换成背景图片的 <code>文件名.后缀</code></li>
 <li>注意：显示图片的代码为:</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs awk">chflags nohidden <span class="hljs-regexp">/Volumes/</span>未命名/bg-<span class="hljs-number"><code class="language-hljs awk">chflags nohidden <span class="hljs-regexp">/Volumes/</span>未命名/bg-<span class="hljs-number">2</span>.png<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">chflags nohidden <span class="hljs-regexp">/Volumes/</span>未命名/bg-<span class="hljs-number">2</span>.png<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>调整窗口大小，如下图：</p>
 </li>

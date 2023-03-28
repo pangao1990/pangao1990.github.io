@@ -75,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -138,7 +138,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -324,7 +324,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          555 字
+          436 字
         
       </span>
     
@@ -400,13 +400,13 @@
 
 <p>在网上找了一圈解决办法，最终可行的办法如下：</p>
 <p>1、进入存放公钥私钥( <code>id_rsa</code> 和 <code>id_rsa.pub</code> )的文件夹里，因为我是 Mac，方法如下，若是 win 系统，请自行谷歌：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs bash"><span class="hljs-built_in"><code class="language-hljs bash"><span class="hljs-built_in">cd</span> ~/.ssh<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/.ssh<br></code></pre></td></tr></table></figure>
 
 <p>2、新建 <code>config</code> 文本：</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs arduino"><code class="language-hljs arduino">vi config<br></code></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">vi config<br></code></pre></td></tr></table></figure>
 
 <p>3、写入以下内容，其中 User 为登录 github 的账号名称：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre class=" language-hljs stylus">Host github<span class="hljs-selector-class">.com</span><br>User pangao1990@qq<span class="hljs-selector-class">.com</span><br>Hostname ssh<span class="hljs-selector-class">.github</span><span class="hljs-selector-class">.com</span><br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port <span class="hljs-number"><code class="language-hljs stylus">Host github<span class="hljs-selector-class">.com</span><br>User pangao1990@qq<span class="hljs-selector-class">.com</span><br>Hostname ssh<span class="hljs-selector-class">.github</span><span class="hljs-selector-class">.com</span><br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port <span class="hljs-number">443</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus">Host github<span class="hljs-selector-class">.com</span><br>User pangao1990@qq<span class="hljs-selector-class">.com</span><br>Hostname ssh<span class="hljs-selector-class">.github</span><span class="hljs-selector-class">.com</span><br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port <span class="hljs-number">443</span><br></code></pre></td></tr></table></figure>
 
 <p>4、执行 <code>ssh -T git@github.com</code> 时，会出现提示如下，回车”yes”即可：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0github%E6%8A%A5Connection_timed_out%E9%94%99%E8%AF%AF-2.png" srcset="/img/loading.gif" lazyload alt="image"></p>

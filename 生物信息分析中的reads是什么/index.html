@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -137,7 +137,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -323,7 +323,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          496 字
+          492 字
         
       </span>
     
@@ -396,14 +396,14 @@
                 <p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84reads%E6%98%AF%E4%BB%80%E4%B9%88-1.png" srcset="/img/loading.gif" lazyload alt="image"> 测序得到的原始图像数据经 base calling 转化为序列数据，我们称之为 <code>raw data</code> 或 <code>raw reads</code> ，结果以 fastq 文件格式存储， fastq 文件为用户得到的最原始文件，里面存储 reads 的序列以及 reads 的测序质量。在 fastq 格式文件中每个 read 由四行描述：</p>
 <span id="more"></span>
 
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs applescript">@<span class="hljs-built_in"><code class="language-hljs applescript">@<span class="hljs-built_in">read</span> ID<br>TGGCGGAGGGATTTGAACCC<br>+<br>bbbbbbbbabbbbbbbbbbb<br></code></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs applescript">@<span class="hljs-built_in">read</span> ID<br>TGGCGGAGGGATTTGAACCC<br>+<br>bbbbbbbbabbbbbbbbbbb<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>Single-end(SE)测序</strong>：1 个 fastq 文件</li>
 <li><strong>Pair-end(PE)测序</strong>：2 个 fastq 文件分别存放 read1 和 read2 的数据</li>
 </ul>
 <p>每个序列共有 4 行，第 1 行和第 3 行是序列名称(有的 fq 文件为了节省存储空间会省略第三行“＋”后面的序列名称)；第 2 行是序列；第 4 行是序列的测序质量，每个字符对应第 2 行每个碱基，第 4 行每个字符对应的 ASCII 值减去 64，即为该碱基的测序质量值，比如 h 对应的 ASCII 值为 104，那么其对应的碱基质量值是 40。<br>碱基质量值范围为 0 到 40。下表为 Solexa 测序错误率与测序质量值简明对应关系，具体计算公式如下：</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs abnf"><span class="hljs-attribute">Q</span> <span class="hljs-operator">=</span> -<span class="hljs-number"><code class="language-hljs abnf"><span class="hljs-attribute">Q</span> <span class="hljs-operator">=</span> -<span class="hljs-number">10</span> log10P<br></code></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">Q</span> <span class="hljs-operator">=</span> -<span class="hljs-number">10</span> log10P<br></code></pre></td></tr></table></figure>
 
 <p>Solexa 测序错误率与测序质量值简明对应关系:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84reads%E6%98%AF%E4%BB%80%E4%B9%88-2.png" srcset="/img/loading.gif" lazyload alt="image"></p>

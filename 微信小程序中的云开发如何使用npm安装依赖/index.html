@@ -76,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -139,7 +139,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -325,7 +325,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          599 字
+          551 字
         
       </span>
     
@@ -404,9 +404,9 @@
 <p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E4%BA%91%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8npm-1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <p>如果某个自建的云函数需要使用 <code>npm</code> 安装第三方依赖，该怎么办呢？操作如下：</p>
 <h4 id="1-右键云函数，选择“终端打开”，如下图："><a href="#1-右键云函数，选择“终端打开”，如下图：" class="headerlink" title="1. 右键云函数，选择“终端打开”，如下图："></a>1. 右键云函数，选择“终端打开”，如下图：</h4><p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E4%BA%91%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8npm-2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<h4 id="2-安装所需依赖："><a href="#2-安装所需依赖：" class="headerlink" title="2. 安装所需依赖："></a>2. 安装所需依赖：</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs ada">npm install request-promise <span class="hljs-comment"><code class="language-hljs ada">npm install request-promise <span class="hljs-comment">--production</span><br></code></pre></td></tr></table></figure>
+<h4 id="2-安装所需依赖："><a href="#2-安装所需依赖：" class="headerlink" title="2. 安装所需依赖："></a>2. 安装所需依赖：</h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install request-promise <span class="hljs-comment">--production</span><br></code></pre></td></tr></table></figure>
 
-<h4 id="3-紧接着，千万别忘了，安装-wx-server-sdk-依赖："><a href="#3-紧接着，千万别忘了，安装-wx-server-sdk-依赖：" class="headerlink" title="3. 紧接着，千万别忘了，安装 wx-server-sdk 依赖："></a>3. 紧接着，千万别忘了，安装 <code>wx-server-sdk</code> 依赖：</h4><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs pgsql">npm install wx-<span class="hljs-keyword">server</span>-sdk <span class="hljs-comment"><code class="language-hljs pgsql">npm install wx-<span class="hljs-keyword">server</span>-sdk <span class="hljs-comment">--production</span><br></code></pre></td></tr></table></figure>
+<h4 id="3-紧接着，千万别忘了，安装-wx-server-sdk-依赖："><a href="#3-紧接着，千万别忘了，安装-wx-server-sdk-依赖：" class="headerlink" title="3. 紧接着，千万别忘了，安装 wx-server-sdk 依赖："></a>3. 紧接着，千万别忘了，安装 <code>wx-server-sdk</code> 依赖：</h4><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">npm install wx-<span class="hljs-keyword">server</span>-sdk <span class="hljs-comment">--production</span><br></code></pre></td></tr></table></figure>
 
 <h4 id="4-选择“上传并部署：所有文件”，如下图："><a href="#4-选择“上传并部署：所有文件”，如下图：" class="headerlink" title="4. 选择“上传并部署：所有文件”，如下图："></a>4. 选择“上传并部署：所有文件”，如下图：</h4><p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E4%BA%91%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8npm-3.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <h4 id="5-等待完成，即可，如下图："><a href="#5-等待完成，即可，如下图：" class="headerlink" title="5. 等待完成，即可，如下图："></a>5. 等待完成，即可，如下图：</h4><p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E4%BA%91%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8npm-4.png" srcset="/img/loading.gif" lazyload alt="image"></p>

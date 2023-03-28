@@ -86,7 +86,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -149,7 +149,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -335,7 +335,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.1k 字
         
       </span>
     
@@ -346,7 +346,7 @@
         
         
         
-          8 分钟
+          6 分钟
         
       </span>
     
@@ -412,17 +412,17 @@
 <h4 id="教程："><a href="#教程：" class="headerlink" title="教程："></a>教程：</h4><ol>
 <li>进入博客文件夹的<code>/themes/next</code>文件夹下</li>
 </ol>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs awk">cd <span class="hljs-regexp">/themes/</span><span class="hljs-keyword"><code class="language-hljs awk">cd <span class="hljs-regexp">/themes/</span><span class="hljs-keyword">next</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/themes/</span><span class="hljs-keyword">next</span><br></code></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>下载安装<code>Progress module</code>，如下</li>
 </ol>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/theme-next/</span>theme-<span class="hljs-keyword">next</span>-pace source<span class="hljs-regexp"><code class="language-hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/theme-next/</span>theme-<span class="hljs-keyword">next</span>-pace source<span class="hljs-regexp">/lib/</span>pace<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/theme-next/</span>theme-<span class="hljs-keyword">next</span>-pace source<span class="hljs-regexp">/lib/</span>pace<br></code></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>在<code>/themes/next/_config.yml</code>中设置，如下</li>
 </ol>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class=" language-hljs coq"># Progress bar <span class="hljs-built_in">in</span> the <span class="hljs-built_in">top</span> during page loading.<br># <span class="hljs-keyword">Dependencies</span>: https://github.com/theme-next/theme-next-pace<br>pace: true #是否开启进度条<br># Themes list:<br># pace-theme-big-counter | <span class="hljs-type">pace</span>-theme-bounce | <span class="hljs-type">pace</span>-theme-barber-shop | <span class="hljs-type">pace</span>-theme-center-atom<br># pace-theme-center-circle | <span class="hljs-type">pace</span>-theme-center-radar | <span class="hljs-type">pace</span>-theme-center-<span class="hljs-built_in">simple</span> | <span class="hljs-type">pace</span>-theme-corner-indicator<br># pace-theme-fill-<span class="hljs-built_in">left</span> | <span class="hljs-type">pace</span>-theme-flash | <span class="hljs-type">pace</span>-theme-loading-bar | <span class="hljs-type">pace</span>-theme-mac-osx | <span class="hljs-type"><code class="language-hljs coq"># Progress bar <span class="hljs-built_in">in</span> the <span class="hljs-built_in">top</span> during page loading.<br># <span class="hljs-keyword">Dependencies</span>: https://github.com/theme-next/theme-next-pace<br>pace: true #是否开启进度条<br># Themes list:<br># pace-theme-big-counter | <span class="hljs-type">pace</span>-theme-bounce | <span class="hljs-type">pace</span>-theme-barber-shop | <span class="hljs-type">pace</span>-theme-center-atom<br># pace-theme-center-circle | <span class="hljs-type">pace</span>-theme-center-radar | <span class="hljs-type">pace</span>-theme-center-<span class="hljs-built_in">simple</span> | <span class="hljs-type">pace</span>-theme-corner-indicator<br># pace-theme-fill-<span class="hljs-built_in">left</span> | <span class="hljs-type">pace</span>-theme-flash | <span class="hljs-type">pace</span>-theme-loading-bar | <span class="hljs-type">pace</span>-theme-mac-osx | <span class="hljs-type">pace</span>-theme-minimal<br># For example<br>pace_theme: pace-theme-center-atom #选择进度条样式<br></code></pre></td></tr></table></figure>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs coq"># Progress bar <span class="hljs-built_in">in</span> the <span class="hljs-built_in">top</span> during page loading.<br># <span class="hljs-keyword">Dependencies</span>: https://github.com/theme-next/theme-next-pace<br>pace: true #是否开启进度条<br># Themes list:<br># pace-theme-big-counter | <span class="hljs-type">pace</span>-theme-bounce | <span class="hljs-type">pace</span>-theme-barber-shop | <span class="hljs-type">pace</span>-theme-center-atom<br># pace-theme-center-circle | <span class="hljs-type">pace</span>-theme-center-radar | <span class="hljs-type">pace</span>-theme-center-<span class="hljs-built_in">simple</span> | <span class="hljs-type">pace</span>-theme-corner-indicator<br># pace-theme-fill-<span class="hljs-built_in">left</span> | <span class="hljs-type">pace</span>-theme-flash | <span class="hljs-type">pace</span>-theme-loading-bar | <span class="hljs-type">pace</span>-theme-mac-osx | <span class="hljs-type">pace</span>-theme-minimal<br># For example<br>pace_theme: pace-theme-center-atom #选择进度条样式<br></code></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>不同的样式效果图：</li>

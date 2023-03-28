@@ -71,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -134,7 +134,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -320,7 +320,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          649 字
         
       </span>
     
@@ -331,7 +331,7 @@
         
         
         
-          7 分钟
+          4 分钟
         
       </span>
     
@@ -390,7 +390,7 @@
             
               <div class="markdown-body">
                 
-                <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre class=" language-hljs perl"><span class="hljs-keyword">use</span> FindBin <span class="hljs-string">qw($Bin)</span>;<br><br><span class="hljs-comment">#遍历文件夹</span><br><span class="hljs-keyword">my</span> $fileReportDir = $Bin;	<span class="hljs-comment">#出报告所在的文件夹地址</span><br><span class="hljs-keyword">if</span>(-e $fileReportDir)&#123;<br><span class="hljs-keyword">opendir</span> DIR, $fileReportDir || <span class="hljs-keyword">die</span> <span class="hljs-string">&quot;Error in opening dir $fileReportDir\n&quot;</span>;<br><span class="hljs-keyword">while</span>( <span class="hljs-keyword">my</span> $file = <span class="hljs-keyword">readdir</span>(DIR))&#123;<br><span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> $file eq <span class="hljs-string">&quot;.&quot;</span>;<br><span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> $file eq <span class="hljs-string">&quot;..&quot;</span>;<br><span class="hljs-keyword">my</span> $fileAll = $fileReportDir.<span class="hljs-string">&quot;/&quot;</span>.$file;<br><span class="hljs-keyword">if</span>(!<span class="hljs-keyword">unlink</span>($fileAll))&#123;<br><span class="hljs-keyword">print</span> <span class="hljs-string">&quot;=====程序终止！=====\n删除表格（&quot;</span>.$fileAll.<span class="hljs-string">&quot;）失败，请手动删除\n&quot;</span>;	<br><span class="hljs-comment">#保留黑框</span><br><span class="hljs-keyword">system</span> pause;<br><span class="hljs-comment">#程序停止运行</span><br><span class="hljs-keyword">die</span>;<br>	    &#125;<br>	 &#125;<br>	 <span class="hljs-keyword">closedir</span> DIR;<br>&#125;<br><br><span class="hljs-comment">#读取文件内容</span><br><span class="hljs-keyword">open</span> FILE, <span class="hljs-string">&quot;&lt;$file&quot;</span> || <span class="hljs-keyword">die</span> <span class="hljs-string">&quot;Not Found file: $file\n&quot;</span>;<br><span class="hljs-keyword">while</span> (&lt;FILE&gt;)&#123;<br><span class="hljs-keyword">my</span> ($gene,$chr) = (<span class="hljs-keyword">split</span> <span class="hljs-regexp">/\t/</span>,$_)[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>];<br>&#125;<br><span class="hljs-keyword"><code class="language-hljs perl"><span class="hljs-keyword">use</span> FindBin <span class="hljs-string">qw($Bin)</span>;<br><br><span class="hljs-comment">#遍历文件夹</span><br><span class="hljs-keyword">my</span> $fileReportDir = $Bin;	<span class="hljs-comment">#出报告所在的文件夹地址</span><br><span class="hljs-keyword">if</span>(-e $fileReportDir)&#123;<br><span class="hljs-keyword">opendir</span> DIR, $fileReportDir || <span class="hljs-keyword">die</span> <span class="hljs-string">&quot;Error in opening dir $fileReportDir\n&quot;</span>;<br><span class="hljs-keyword">while</span>( <span class="hljs-keyword">my</span> $file = <span class="hljs-keyword">readdir</span>(DIR))&#123;<br><span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> $file eq <span class="hljs-string">&quot;.&quot;</span>;<br><span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> $file eq <span class="hljs-string">&quot;..&quot;</span>;<br><span class="hljs-keyword">my</span> $fileAll = $fileReportDir.<span class="hljs-string">&quot;/&quot;</span>.$file;<br><span class="hljs-keyword">if</span>(!<span class="hljs-keyword">unlink</span>($fileAll))&#123;<br><span class="hljs-keyword">print</span> <span class="hljs-string">&quot;=====程序终止！=====\n删除表格（&quot;</span>.$fileAll.<span class="hljs-string">&quot;）失败，请手动删除\n&quot;</span>;	<br><span class="hljs-comment">#保留黑框</span><br><span class="hljs-keyword">system</span> pause;<br><span class="hljs-comment">#程序停止运行</span><br><span class="hljs-keyword">die</span>;<br>	    &#125;<br>	 &#125;<br>	 <span class="hljs-keyword">closedir</span> DIR;<br>&#125;<br><br><span class="hljs-comment">#读取文件内容</span><br><span class="hljs-keyword">open</span> FILE, <span class="hljs-string">&quot;&lt;$file&quot;</span> || <span class="hljs-keyword">die</span> <span class="hljs-string">&quot;Not Found file: $file\n&quot;</span>;<br><span class="hljs-keyword">while</span> (&lt;FILE&gt;)&#123;<br><span class="hljs-keyword">my</span> ($gene,$chr) = (<span class="hljs-keyword">split</span> <span class="hljs-regexp">/\t/</span>,$_)[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>];<br>&#125;<br><span class="hljs-keyword">close</span> FILE;<br></code></pre></td></tr></table></figure>
+                <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs perl"><span class="hljs-keyword">use</span> FindBin <span class="hljs-string">qw($Bin)</span>;<br><br><span class="hljs-comment">#遍历文件夹</span><br><span class="hljs-keyword">my</span> $fileReportDir = $Bin;	<span class="hljs-comment">#出报告所在的文件夹地址</span><br><span class="hljs-keyword">if</span>(-e $fileReportDir)&#123;<br><span class="hljs-keyword">opendir</span> DIR, $fileReportDir || <span class="hljs-keyword">die</span> <span class="hljs-string">&quot;Error in opening dir $fileReportDir\n&quot;</span>;<br><span class="hljs-keyword">while</span>( <span class="hljs-keyword">my</span> $file = <span class="hljs-keyword">readdir</span>(DIR))&#123;<br><span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> $file eq <span class="hljs-string">&quot;.&quot;</span>;<br><span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> $file eq <span class="hljs-string">&quot;..&quot;</span>;<br><span class="hljs-keyword">my</span> $fileAll = $fileReportDir.<span class="hljs-string">&quot;/&quot;</span>.$file;<br><span class="hljs-keyword">if</span>(!<span class="hljs-keyword">unlink</span>($fileAll))&#123;<br><span class="hljs-keyword">print</span> <span class="hljs-string">&quot;=====程序终止！=====\n删除表格（&quot;</span>.$fileAll.<span class="hljs-string">&quot;）失败，请手动删除\n&quot;</span>;	<br><span class="hljs-comment">#保留黑框</span><br><span class="hljs-keyword">system</span> pause;<br><span class="hljs-comment">#程序停止运行</span><br><span class="hljs-keyword">die</span>;<br>	    &#125;<br>	 &#125;<br>	 <span class="hljs-keyword">closedir</span> DIR;<br>&#125;<br><br><span class="hljs-comment">#读取文件内容</span><br><span class="hljs-keyword">open</span> FILE, <span class="hljs-string">&quot;&lt;$file&quot;</span> || <span class="hljs-keyword">die</span> <span class="hljs-string">&quot;Not Found file: $file\n&quot;</span>;<br><span class="hljs-keyword">while</span> (&lt;FILE&gt;)&#123;<br><span class="hljs-keyword">my</span> ($gene,$chr) = (<span class="hljs-keyword">split</span> <span class="hljs-regexp">/\t/</span>,$_)[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>];<br>&#125;<br><span class="hljs-keyword">close</span> FILE;<br></code></pre></td></tr></table></figure>
 
 <hr>
 
@@ -517,9 +517,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/ParallelsDesktop-%E8%99%9A%E6%8B%9F%E6%9C%BAMac%E7%BB%BF%E8%89%B2%E7%89%88/" title="ParallelsDesktop-虚拟机Mac绿色版">
+                      <a href="/Perl%E5%A4%84%E7%90%86Excel/" title="Perl处理Excel">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ParallelsDesktop-虚拟机Mac绿色版</span>
+                        <span class="hidden-mobile">Perl处理Excel</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -527,8 +527,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Perl%E5%A4%84%E7%90%86Excel/" title="Perl处理Excel">
-                        <span class="hidden-mobile">Perl处理Excel</span>
+                      <a href="/Perl%E7%9A%84%E7%AE%80%E5%8D%95%E8%81%94%E7%BD%91%E6%93%8D%E4%BD%9C/" title="Perl的简单联网操作">
+                        <span class="hidden-mobile">Perl的简单联网操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

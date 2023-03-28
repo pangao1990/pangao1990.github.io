@@ -71,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":"https://pxfg18cf.api.lncldglobal.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"pxFg18cfkqjLozU2vsCNFrNt-MdYXbMMI","app_key":"UqKW4n69MJwOftSbFPrze4it","server_url":null,"path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -134,7 +134,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
@@ -320,7 +320,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          294 字
+          179 字
         
       </span>
     
@@ -331,7 +331,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -392,13 +392,13 @@
                 
                 <ol>
 <li><p>在项目根目录下安装</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs js"><code class="language-hljs js">npm install --save js-base64<br></code></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">npm install --save js-base64<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在项目文件中引入</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs js"><span class="hljs-keyword">let</span> <span class="hljs-title class_">Base64</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;js-base64&#x27;</span>).<span class="hljs-property"><code class="language-hljs js"><span class="hljs-keyword">let</span> <span class="hljs-title class_">Base64</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;js-base64&#x27;</span>).<span class="hljs-property">Base64</span><br></code></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> <span class="hljs-title class_">Base64</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;js-base64&#x27;</span>).<span class="hljs-property">Base64</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在项目文件中使用</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs js"><span class="hljs-title class_">Base64</span>.<span class="hljs-title function_">encode</span>(<span class="hljs-string">&#x27;潘高&#x27;</span>)  <span class="hljs-comment">// 5r2Y6auY</span><br><span class="hljs-title class_">Base64</span>.<span class="hljs-title function_">decode</span>(<span class="hljs-string">&#x27;5r2Y6auY&#x27;</span>)  <span class="hljs-comment"><code class="language-hljs js"><span class="hljs-title class_">Base64</span>.<span class="hljs-title function_">encode</span>(<span class="hljs-string">&#x27;潘高&#x27;</span>)  <span class="hljs-comment">// 5r2Y6auY</span><br><span class="hljs-title class_">Base64</span>.<span class="hljs-title function_">decode</span>(<span class="hljs-string">&#x27;5r2Y6auY&#x27;</span>)  <span class="hljs-comment">// 潘高</span><br></code></pre></td></tr></table></figure></li>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Base64</span>.<span class="hljs-title function_">encode</span>(<span class="hljs-string">&#x27;潘高&#x27;</span>)  <span class="hljs-comment">// 5r2Y6auY</span><br><span class="hljs-title class_">Base64</span>.<span class="hljs-title function_">decode</span>(<span class="hljs-string">&#x27;5r2Y6auY&#x27;</span>)  <span class="hljs-comment">// 潘高</span><br></code></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 
