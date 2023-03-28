@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://blog.pangao.vip/sitemap.xml
+Sitemap: https://blog.pangao.vip/baidusitemap.xml

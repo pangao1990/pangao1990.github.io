@@ -1,0 +1,989 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/favicon.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="潘高">
+  <meta name="keywords" content="Python,读文件,写文件">
+  
+    <meta name="description" content="如何使用Python读写文件？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python读写文件">
+<meta property="og:url" content="https://blog.pangao.vip/Python%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6/">
+<meta property="og:site_name" content="潘高的小站">
+<meta property="og:description" content="如何使用Python读写文件？">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-04-11T03:17:22.000Z">
+<meta property="article:modified_time" content="2021-07-29T06:05:07.781Z">
+<meta property="article:author" content="潘高">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+     <!-- google广告验证 --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317369003185250" crossorigin="anonymous"></script> <!-- google分析 --> <meta name="google-site-verification" content="google180fd90b1a12c24d.html" /> 
+  
+  <title>Python读写文件 - 潘高的小站</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"w5RAfQXjT6iFfBtGwiTfxQOP-gzGzoHsz","app_key":"h55viQ2cLIrigHjPHDfIS2ly","server_url":"https://w5rafqxj.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?3cb997f9d46af905b450452a8f181d9e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-163962674-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+    <!-- cnzz Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('//s4.cnzz.com/z_stat.php?id=1278827075&show=pic');
+      }
+    </script>
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'AW-715652541');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4XN0EX1GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-P4XN0EX1GY');
+</script>
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>潘高的小站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-shijianzhou"></i>
+                <span>时间轴</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/icp/">
+                <i class="iconfont icon-icp"></i>
+                <span>icp备案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+    style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Python读写文件"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        潘高
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2019-04-11 11:17" pubdate>
+          星期四, 四月 11日 2019, 11:17 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          19 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-1">
+      
+
+    </div>
+
+    <div class="col-lg-9 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Python读写文件</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2021年7月29日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h2><p>用 <code>open()</code> 方法打开文件，返回一个文件对象，如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs ini"><span class="hljs-attr">f</span> = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string"><code class="language-hljs ini"><span class="hljs-attr">f</span> = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<p><code>r</code> 表示文本文件，<code>rb</code> 表示二进制文件。（默认参数是 <code>r</code> ）</p>
+<span id="more"></span>
+
+<p>如果文件不存在，<code>open()</code> 函数就会抛出一个IOError的错误，并且给出错误码和详细的信息告诉你文件不存在：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs vim">&gt;&gt;&gt; <span class="hljs-keyword">f</span>=<span class="hljs-keyword">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br>Traceback (most recent <span class="hljs-keyword">call</span> <span class="hljs-keyword">last</span>):<br>  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, <span class="hljs-built_in">line</span> <span class="hljs-number">1</span>, in <span class="hljs-symbol">&lt;module&gt;</span><br>FileNotFoundError: [Errno <span class="hljs-number">2</span>] No such <span class="hljs-keyword">file</span> <span class="hljs-built_in">or</span> directory: <span class="hljs-string"><code class="language-hljs vim">&gt;&gt;&gt; <span class="hljs-keyword">f</span>=<span class="hljs-keyword">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br>Traceback (most recent <span class="hljs-keyword">call</span> <span class="hljs-keyword">last</span>):<br>  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, <span class="hljs-built_in">line</span> <span class="hljs-number">1</span>, in <span class="hljs-symbol">&lt;module&gt;</span><br>FileNotFoundError: [Errno <span class="hljs-number">2</span>] No such <span class="hljs-keyword">file</span> <span class="hljs-built_in">or</span> directory: <span class="hljs-string">&#x27;test.txt&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限的。</p>
+<figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs cos">f.<span class="hljs-keyword"><code class="language-hljs cos">f.<span class="hljs-keyword">close</span>()<br></code></pre></td></tr></table></figure>
+<p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现，如下：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre class=" language-hljs vim"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">f</span> = <span class="hljs-keyword">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br>    <span class="hljs-keyword">print</span>(<span class="hljs-keyword">f</span>.<span class="hljs-keyword">read</span>())<br><span class="hljs-keyword">finally</span>:<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">f</span>:<br>        <span class="hljs-keyword">f</span>.<span class="hljs-keyword"><code class="language-hljs vim"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">f</span> = <span class="hljs-keyword">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)<br>    <span class="hljs-keyword">print</span>(<span class="hljs-keyword">f</span>.<span class="hljs-keyword">read</span>())<br><span class="hljs-keyword">finally</span>:<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">f</span>:<br>        <span class="hljs-keyword">f</span>.<span class="hljs-keyword">close</span>()<br></code></pre></td></tr></table></figure>
+<p>但每次这么写很麻烦，Python引入with语句自动帮我们调用close()方法，如下：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs livecodeserver"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    print(f.<span class="hljs-built_in"><code class="language-hljs livecodeserver"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    print(f.<span class="hljs-built_in">read</span>())<br></code></pre></td></tr></table></figure>
+<p>python文件对象提供了三个“读”方法： <code>read()</code>、<code>readline()</code> 和 <code>readlines()</code>。每种方法可以接受一个变量以限制每次读取的数据量。</p>
+<ul>
+<li>read() 每次读取整个文件，它通常用于将文件内容放到一个字符串变量中。如果文件大于可用内存，为了保险起见，可以反复调用read(size)方法，每次最多读取size个字节的内容。</li>
+<li>readlines() 之间的差异是后者一次读取整个文件，象 .read() 一样。.readlines() 自动将文件内容分析成一个行的列表，该列表可以由 Python 的 for … in … 结构进行处理。</li>
+<li>readline() 每次只读取一行，通常比readlines() 慢得多。仅当没有足够内存可以一次读取整个文件时，才应该使用 readline()。</li>
+</ul>
+<p><strong>注意：</strong> 这三种方法都会把每行末尾的 <code>\n</code> 也读入，因此需要手动去除 <code>\n</code> ，如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs stylus">with <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test1.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>) as f1:<br>    list1 = f1<span class="hljs-selector-class">.readlines</span>()<br><span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(list1)):<br>    list1<span class="hljs-selector-attr">[i]</span> = list1<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-class">.rstrip</span>(<span class="hljs-string"><code class="language-hljs stylus">with <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test1.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>) as f1:<br>    list1 = f1<span class="hljs-selector-class">.readlines</span>()<br><span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(list1)):<br>    list1<span class="hljs-selector-attr">[i]</span> = list1<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-class">.rstrip</span>(<span class="hljs-string">&#x27;\n&#x27;</span>)    #去除末尾的 \n<br></code></pre></td></tr></table></figure>
+<h2 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h2><p>写文件也是用 <code>open()</code> 函数，不同的是传入标识符 <code>w</code> <code>wb</code> <code>a</code> <code>ab</code>， 如下：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class=" language-hljs livecodeserver">f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-comment"># 若是&#x27;wb&#x27;就表示写二进制文件</span><br>f.<span class="hljs-built_in">write</span>(<span class="hljs-string">&#x27;Hello, world!&#x27;</span>)<br>f.<span class="hljs-built_in"><code class="language-hljs livecodeserver">f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-comment"># 若是&#x27;wb&#x27;就表示写二进制文件</span><br>f.<span class="hljs-built_in">write</span>(<span class="hljs-string">&#x27;Hello, world!&#x27;</span>)<br>f.<span class="hljs-built_in">close</span>()<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>w</code> 是指：如果没有这个文件，就新建一个；如果有，就把原文件清空再写入新内容。</li>
+<li><code>a</code> 是指：如果没有这个文件，就新建一个；如果有，就接在原文件的后面写入新内容。</li>
+</ul>
+<p><strong>注意：</strong> 我们可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs livecodeserver"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    f.<span class="hljs-built_in">write</span>(<span class="hljs-string"><code class="language-hljs livecodeserver"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    f.<span class="hljs-built_in">write</span>(<span class="hljs-string">&#x27;Hello, world!&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<p>python文件对象提供了两个“写”方法： write() 和 writelines()。</p>
+<ul>
+<li>write()方法和read()、readline()方法对应，是将字符串写入到文件中。</li>
+<li>writelines()方法和readlines()方法对应，也是针对列表的操作。它接收一个字符串列表作为参数，将他们写入到文件中，换行符不会自动的加入，因此，需要显式的加入换行符。<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre class=" language-hljs livecodeserver">f1 = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test1.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>)<br>f1.writelines([<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>])<br><span class="hljs-comment">#    此时test1.txt的内容为:123</span><br><br>f1 = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test1.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>)<br>f1.writelines([<span class="hljs-string">&quot;1\n&quot;</span>, <span class="hljs-string">&quot;2\n&quot;</span>, <span class="hljs-string">&quot;3\n&quot;</span>])<br><span class="hljs-comment">#    此时test1.txt的内容为:</span><br><span class="hljs-comment">#    1</span><br><span class="hljs-comment">#    2        </span><br><span class="hljs-comment"><code class="language-hljs livecodeserver">f1 = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test1.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>)<br>f1.writelines([<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>])<br><span class="hljs-comment">#    此时test1.txt的内容为:123</span><br><br>f1 = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test1.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>)<br>f1.writelines([<span class="hljs-string">&quot;1\n&quot;</span>, <span class="hljs-string">&quot;2\n&quot;</span>, <span class="hljs-string">&quot;3\n&quot;</span>])<br><span class="hljs-comment">#    此时test1.txt的内容为:</span><br><span class="hljs-comment">#    1</span><br><span class="hljs-comment">#    2        </span><br><span class="hljs-comment">#    3</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="关于open-的mode参数："><a href="#关于open-的mode参数：" class="headerlink" title="关于open()的mode参数："></a>关于open()的mode参数：</h4><ul>
+<li><p>‘r’：读</p>
+</li>
+<li><p>‘w’：写</p>
+</li>
+<li><p>‘a’：追加</p>
+</li>
+<li><p>‘r+’ &#x3D;&#x3D; r+w（可读可写，文件若不存在就报错(IOError)）</p>
+</li>
+<li><p>‘w+’ &#x3D;&#x3D; w+r（可读可写，文件若不存在就创建）</p>
+</li>
+<li><p>‘a+’ &#x3D;&#x3D;a+r（可追加可写，文件若不存在就创建）</p>
+</li>
+</ul>
+<p>对应的，如果是二进制文件，就都加一个b就好了：<br>‘rb’　　‘wb’　　‘ab’　　‘rb+’　　‘wb+’　　‘ab+’</p>
+<h4 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h4><p>默认情况下是读取 <code>UTF-8</code> 编码的文本文件，如果要读取其他编码，需要给open()函数传入encoding参数，例如，读取GBK编码的文件：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs ini"><span class="hljs-attr">f</span> = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string"><code class="language-hljs ini"><span class="hljs-attr">f</span> = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;gbk&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<p>遇到有些编码不规范的文件，你可能会遇到UnicodeDecodeError，因为在文本文件中可能夹杂了一些非法编码的字符。遇到这种情况，open()函数还接收一个errors参数，表示如果遇到编码错误后如何处理。最简单的方式是直接忽略：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs routeros">f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, <span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;gbk&#x27;</span>, <span class="hljs-attribute">errors</span>=<span class="hljs-string"><code class="language-hljs routeros">f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, <span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;gbk&#x27;</span>, <span class="hljs-attribute">errors</span>=<span class="hljs-string">&#x27;ignore&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<hr>
+
+                
+              </div>
+            
+            <div>
+
+              <!-- 赞赏码 -->
+              <hr>
+              <div style="margin-top:20px;text-align:center">
+                <div style="margin-bottom:10px;">如果这篇文章对你有帮助，或者想给我微小的工作一点点资瓷，请随意打赏。</div>
+                <div id="QR" style="display: block;">
+                  <div id="wechat" style="display:inline-block;margin-right:50px;">
+                    <img id="wechat_qr" src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/wechatpay.jpg" srcset="/img/loading.gif" lazyload alt="潘高 微信支付" style="width:150px; height:150px;">
+                    <p style="color:#159718">微信支付</p>
+                  </div>
+                  <div id="alipay" style="display:inline-block;">
+                    <img id="alipay_qr" src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/alipay.png" srcset="/img/loading.gif" lazyload alt="潘高 支付宝" style="width:150px; height:150px;">
+                    <p style="color:#217cfb">支付宝</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Python/" class="category-chain-item">Python</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Python读写文件</div>
+      <div>https://blog.pangao.vip/Python读写文件/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>潘高</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2019年4月11日 上午</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2021年7月29日 下午</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Python%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%AEurllib%E6%A8%A1%E5%9D%97%E6%88%96%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93requests%E8%AE%BF%E9%97%AE%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/" title="Python使用内置urllib模块或第三方库requests访问网络资源">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python使用内置urllib模块或第三方库requests访问网络资源</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Python%E6%93%8D%E4%BD%9C%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%A6%82%EF%BC%9A%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%EF%BC%8C%E8%8E%B7%E5%8F%96%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%8D%E7%BD%AE%EF%BC%8C%E8%B7%AF%E5%BE%84%E6%8B%BC%E6%8E%A5%EF%BC%8C%E8%B7%AF%E5%BE%84%E6%8B%86%E5%88%86%EF%BC%8C%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D%EF%BC%8C%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6/" title="Python操作目录，如：获取当前工作目录，获取执行命令的位置，路径拼接，路径拆分，文件重命名，删除文件，复制文件">
+                        <span class="hidden-mobile">Python操作目录，如：获取当前工作目录，获取执行命令的位置，路径拼接，路径拆分，文件重命名，删除文件，复制文件</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      <!-- google广告 -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- 横幅 - 留言板 -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-5317369003185250"
+    data-ad-slot="9014150860"
+    data-ad-format="auto"
+    data-full-width-responsive="true">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<br>
+<hr>
+<br>
+
+
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.14.1/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.14.1/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://comment.pangao.vip","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.1.0/alus","https://unpkg.com/@waline/emojis@1.1.0/qq"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10,"avatar":"identicon","avatarCDN":"https://seccdn.libravatar.org/avatar/","avatarForce":false,"highlight":true},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>评论功能在允许 JavaScript 运行的环境下效果更佳哦</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <link rel="stylesheet" href="//at.alicdn.com/t/font_1765130_cg2uvt55y8.css">
+        </div>
+      </div>
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+
+  <!-- 一言 -->
+  <p id="hitokoto" style="color:blueviolet">即将出现一段不可描述的话...</p>
+  <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(response => response.json())
+      .then(data => {
+        const hitokoto = document.getElementById('hitokoto')
+        hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+  </script>
+
+  <!-- 网站运行时间统计 -->
+  <div>
+    <span id="timeDate">正在烧脑计算建站时间...</span>
+    <span id="times"></span>
+    <script>
+      var now = new Date();
+      function createtime() {
+        var grt = new Date("02/23/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+          hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+          mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+          snum = "0" + snum;
+        }
+        document.getElementById("timeDate").innerHTML = "本站已默默无闻运行&nbsp" + dnum + "&nbsp天";
+        document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
+      setInterval("createtime()", 250);
+    </script>
+  </div>
+
+  
+    <div class="statistics">
+  
+  
+
+  
+    <!-- LeanCloud 统计UV -->
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        承蒙 
+          <span id="leancloud-site-uv"></span>
+           位朋友
+      </span>
+    
+    <!-- LeanCloud 统计PV -->
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        造访 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="/icp/blog.pangao.vip.html" target="_blank" rel="nofollow noopener">
+      猿ICP证19901222号
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+    <!-- cnzz Analytics Icon -->
+    <span id="cnzz_stat_icon_1278827075" style="display: none"></span>
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳哦</div>
+  </noscript>
+</body>
+</html>

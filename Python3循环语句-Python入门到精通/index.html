@@ -1,0 +1,1003 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/favicon.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="潘高">
+  <meta name="keywords" content="Python,Vue,JS,CSS,H5,HTML,Android,iOS,Java,Swift,Perl,微信小程序,开发,博客,潘高">
+  
+    <meta name="description" content="循环语句循环语句的作用就是反复执行—段代码，直到满足跳出循环的条件为止。我们来看看下面这幅流程图。  当程序执行到循环语句时，若是执行结果为真，则执行语句 1；然后，程序返回，继续执行循环语句，直到循环语句的执行结果为假，程序才会跳出循环，执行语句 2，接着程序结束。在这个流程图中，我们可以看到，如果循环语句的执行结果一直为真，那么，程序就会循环执行语句 1，除非内存溢出，程序报错；否则，程序永远">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python3循环语句-Python入门到精通">
+<meta property="og:url" content="https://blog.pangao.vip/Python3%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+<meta property="og:site_name" content="潘高的小站">
+<meta property="og:description" content="循环语句循环语句的作用就是反复执行—段代码，直到满足跳出循环的条件为止。我们来看看下面这幅流程图。  当程序执行到循环语句时，若是执行结果为真，则执行语句 1；然后，程序返回，继续执行循环语句，直到循环语句的执行结果为假，程序才会跳出循环，执行语句 2，接着程序结束。在这个流程图中，我们可以看到，如果循环语句的执行结果一直为真，那么，程序就会循环执行语句 1，除非内存溢出，程序报错；否则，程序永远">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/index/Python3%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.png">
+<meta property="article:published_time" content="2019-10-25T13:15:22.000Z">
+<meta property="article:modified_time" content="2023-03-28T07:40:42.901Z">
+<meta property="article:author" content="潘高">
+<meta property="article:tag" content="Python入门到精通">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/index/Python3%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.png">
+  
+  
+  
+     <!-- google广告验证 --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5317369003185250" crossorigin="anonymous"></script> <!-- google分析 --> <meta name="google-site-verification" content="google180fd90b1a12c24d.html" /> 
+  
+  <title>Python3循环语句-Python入门到精通 - 潘高的小站</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.pangao.vip","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":false},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3cb997f9d46af905b450452a8f181d9e","google":"UA-163962674-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":1278827075,"leancloud":{"app_id":"w5RAfQXjT6iFfBtGwiTfxQOP-gzGzoHsz","app_key":"h55viQ2cLIrigHjPHDfIS2ly","server_url":"https://w5rafqxj.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?3cb997f9d46af905b450452a8f181d9e";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-163962674-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+    <!-- cnzz Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('//s4.cnzz.com/z_stat.php?id=1278827075&show=pic');
+      }
+    </script>
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-715652541"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'AW-715652541');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4XN0EX1GY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-P4XN0EX1GY');
+</script>
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 40vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>潘高的小站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-shijianzhou"></i>
+                <span>时间轴</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/icp/">
+                <i class="iconfont icon-icp"></i>
+                <span>icp备案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+    style="background: url('https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/banner/Python入门到精通.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Python3循环语句-Python入门到精通"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        潘高
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2019-10-25 21:15" pubdate>
+          星期五, 十月 25日 2019, 9:15 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-1">
+      
+
+    </div>
+
+    <div class="col-lg-9 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Python3循环语句-Python入门到精通</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年3月28日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p><strong>循环语句的作用就是反复执行—段代码，直到满足跳出循环的条件为止。</strong>我们来看看下面这幅流程图。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/Python3%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A-1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p>当程序执行到循环语句时，若是执行结果为真，则执行语句 1；然后，程序返回，继续执行循环语句，直到循环语句的执行结果为假，程序才会跳出循环，执行语句 2，接着程序结束。<br>在这个流程图中，我们可以看到，如果循环语句的执行结果一直为真，那么，程序就会循环执行语句 1，除非内存溢出，程序报错；否则，程序永远不会停止。</p>
+<p>就像火影忍者里的鼬大神释放的一个忍术伊邪那美一样，永远循环下去，直到找到突破口。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/Python3%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A-2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p>Python 的循环语句有两种，一种是 <code>while</code> ，另一种是 <code>for</code> 。</p>
+<h3 id="while-语句"><a href="#while-语句" class="headerlink" title="while 语句"></a>while 语句</h3><p><code>while</code> 语句的形式如下所示：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs actionscript"><span class="hljs-keyword">while</span> 判断条件:<br>    语句<span class="hljs-number">1</span><br><span class="hljs-keyword">else</span>:<br>    语句<span class="hljs-number"><code class="language-hljs actionscript"><span class="hljs-keyword">while</span> 判断条件:<br>    语句<span class="hljs-number">1</span><br><span class="hljs-keyword">else</span>:<br>    语句<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>若判断条件为真，则执行语句 1；否则，执行语句 2。</p>
+<p>如下例子，就是循环计算 1+2+3…+100</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre class=" language-hljs axapta">n = <span class="hljs-number">100</span><br><span class="hljs-keyword">sum</span> = <span class="hljs-number">0</span><br>counter = <span class="hljs-number">1</span><br><br><span class="hljs-keyword">while</span> counter &lt;= n:<br>    <span class="hljs-keyword">sum</span> = <span class="hljs-keyword">sum</span> + counter<br>    counter += <span class="hljs-number">1</span><br><br><span class="hljs-keyword">print</span>(<span class="hljs-string">&quot;1 到 %d 之和为: %d&quot;</span> % (n,<span class="hljs-keyword"><code class="language-hljs axapta">n = <span class="hljs-number">100</span><br><span class="hljs-keyword">sum</span> = <span class="hljs-number">0</span><br>counter = <span class="hljs-number">1</span><br><br><span class="hljs-keyword">while</span> counter &lt;= n:<br>    <span class="hljs-keyword">sum</span> = <span class="hljs-keyword">sum</span> + counter<br>    counter += <span class="hljs-number">1</span><br><br><span class="hljs-keyword">print</span>(<span class="hljs-string">&quot;1 到 %d 之和为: %d&quot;</span> % (n,<span class="hljs-keyword">sum</span>))<br></code></pre></td></tr></table></figure>
+
+<h4 id="无限循环"><a href="#无限循环" class="headerlink" title="无限循环"></a>无限循环</h4><p>我们可以通过设置条件表达式永远为真，来实现无限循环。<strong>无限循环在服务器上的实时请求非常有用。</strong>如下是一段示例：</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre class=" language-hljs axapta"><span class="hljs-built_in">var</span> = <span class="hljs-number">1</span><br><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">var</span> == <span class="hljs-number">1</span> :<br>    <span class="hljs-meta"># 表达式永远为 true</span><br>    strInput = input(<span class="hljs-string">&quot;请输入:&quot;</span>)<br>    <span class="hljs-keyword">print</span> (<span class="hljs-string">&quot;你输入的是: &quot;</span>, strInput)<br><br><span class="hljs-keyword">print</span> (<span class="hljs-string"><code class="language-hljs axapta"><span class="hljs-built_in">var</span> = <span class="hljs-number">1</span><br><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">var</span> == <span class="hljs-number">1</span> :<br>    <span class="hljs-meta"># 表达式永远为 true</span><br>    strInput = input(<span class="hljs-string">&quot;请输入:&quot;</span>)<br>    <span class="hljs-keyword">print</span> (<span class="hljs-string">&quot;你输入的是: &quot;</span>, strInput)<br><br><span class="hljs-keyword">print</span> (<span class="hljs-string">"结束"</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="for-语句"><a href="#for-语句" class="headerlink" title="for 语句"></a>for 语句</h3><p><code>for</code> 语句的形式如下所示：</p>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs nestedtext"><span class="hljs-attribute">for 变量 in 序列</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">语句1</span><br><span class="hljs-attribute">else</span><span class="hljs-punctuation"><code class="language-hljs nestedtext"><span class="hljs-attribute">for 变量 in 序列</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">语句1</span><br><span class="hljs-attribute">else</span><span class="hljs-punctuation">:</span><br>    语句2<br></code></pre></td></tr></table></figure>
+
+<p>遍历序列，获取元素项，并执行语句 1；当遍历结束，执行语句 2。</p>
+<p>如下例子，遍历列表，并打印列表的元素项：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs powershell">fruits = [<span class="hljs-string">&#x27;葡萄&#x27;</span>, <span class="hljs-string">&#x27;西瓜&#x27;</span>, <span class="hljs-string">&#x27;香蕉&#x27;</span>, <span class="hljs-string">&#x27;苹果&#x27;</span>]<br><br><span class="hljs-keyword">for</span> <span class="hljs-built_in">ft</span> <span class="hljs-keyword">in</span> fruits:<br>    print(<span class="hljs-built_in"><code class="language-hljs powershell">fruits = [<span class="hljs-string">&#x27;葡萄&#x27;</span>, <span class="hljs-string">&#x27;西瓜&#x27;</span>, <span class="hljs-string">&#x27;香蕉&#x27;</span>, <span class="hljs-string">&#x27;苹果&#x27;</span>]<br><br><span class="hljs-keyword">for</span> <span class="hljs-built_in">ft</span> <span class="hljs-keyword">in</span> fruits:<br>    print(<span class="hljs-built_in">ft</span>)<br></code></pre></td></tr></table></figure>
+
+<p>在循环语句中还有三个比较重要的语句：<code>break</code> 、<code>continue</code> 、<code>pass</code> 。</p>
+<h4 id="break"><a href="#break" class="headerlink" title="break"></a>break</h4><p><code>break</code> 是指立刻跳出全部循环，不再执行循环中的语句。</p>
+<h4 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h4><p><code>continue</code> 是指立刻跳出本次循环，不再执行本次循环中剩余的语句，但是还会继续执行下一次循环代码。</p>
+<h4 id="pass"><a href="#pass" class="headerlink" title="pass"></a>pass</h4><p><code>pass</code> 是空语句，为了保持程序结构的完整性。它不做任何事情，相当于占位语句。</p>
+<hr>
+<h3 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h3><ul>
+<li><p>习题 1：</p>
+<p>用 while 语句打印出九九乘法表。</p>
+</li>
+<li><p>习题 2：</p>
+<p>一个四位数 abcd，满足 abcd * 4 &#x3D; dcba，求这个数。</p>
+</li>
+</ul>
+<hr>
+<p>更多编程教学请关注公众号：<strong>潘高陪你学编程</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E6%BD%98%E9%AB%98%E9%99%AA%E4%BD%A0%E5%AD%A6%E7%BC%96%E7%A8%8B.jpg" srcset="/img/loading.gif" lazyload alt="image"></p>
+<hr>
+
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="//player.bilibili.com/player.html?aid=73389020&cid=125541149&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
+    </iframe>
+</div>
+
+
+<hr>
+<h3 id="习题答案"><a href="#习题答案" class="headerlink" title="习题答案"></a>习题答案</h3><ul>
+<li>习题 1：</li>
+</ul>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre class=" language-hljs apache"><span class="hljs-attribute">i</span> = <span class="hljs-number">1</span>   # 外边一层循环控制行数<br><span class="hljs-attribute">while</span> i &lt;= <span class="hljs-number">9</span>:<br>    <span class="hljs-attribute">j</span> = <span class="hljs-number">1</span>   # 里面一层循环控制每一行中的列数<br>    <span class="hljs-attribute">while</span> j &lt;= i:<br>        <span class="hljs-attribute">mut</span> = j * i<br>        <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;%d*%d=%d&quot;</span> % (j, i, mut), end=<span class="hljs-string">&quot;   &quot;</span>)<br>        <span class="hljs-attribute">j</span> += <span class="hljs-number">1</span><br>    <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;&quot;</span>)<br>    <span class="hljs-attribute">i</span> += <span class="hljs-number">1</span><br><br><span class="hljs-comment">#######################输出#######################</span><br><br><span class="hljs-attribute">1</span>*<span class="hljs-number">1</span>=<span class="hljs-number">1</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">2</span>=<span class="hljs-number">2</span>   <span class="hljs-number">2</span>*<span class="hljs-number">2</span>=<span class="hljs-number">4</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">3</span>=<span class="hljs-number">3</span>   <span class="hljs-number">2</span>*<span class="hljs-number">3</span>=<span class="hljs-number">6</span>   <span class="hljs-number">3</span>*<span class="hljs-number">3</span>=<span class="hljs-number">9</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">4</span>=<span class="hljs-number">4</span>   <span class="hljs-number">2</span>*<span class="hljs-number">4</span>=<span class="hljs-number">8</span>   <span class="hljs-number">3</span>*<span class="hljs-number">4</span>=<span class="hljs-number">12</span>   <span class="hljs-number">4</span>*<span class="hljs-number">4</span>=<span class="hljs-number">16</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">5</span>=<span class="hljs-number">5</span>   <span class="hljs-number">2</span>*<span class="hljs-number">5</span>=<span class="hljs-number">10</span>   <span class="hljs-number">3</span>*<span class="hljs-number">5</span>=<span class="hljs-number">15</span>   <span class="hljs-number">4</span>*<span class="hljs-number">5</span>=<span class="hljs-number">20</span>   <span class="hljs-number">5</span>*<span class="hljs-number">5</span>=<span class="hljs-number">25</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">6</span>=<span class="hljs-number">6</span>   <span class="hljs-number">2</span>*<span class="hljs-number">6</span>=<span class="hljs-number">12</span>   <span class="hljs-number">3</span>*<span class="hljs-number">6</span>=<span class="hljs-number">18</span>   <span class="hljs-number">4</span>*<span class="hljs-number">6</span>=<span class="hljs-number">24</span>   <span class="hljs-number">5</span>*<span class="hljs-number">6</span>=<span class="hljs-number">30</span>   <span class="hljs-number">6</span>*<span class="hljs-number">6</span>=<span class="hljs-number">36</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">7</span>=<span class="hljs-number">7</span>   <span class="hljs-number">2</span>*<span class="hljs-number">7</span>=<span class="hljs-number">14</span>   <span class="hljs-number">3</span>*<span class="hljs-number">7</span>=<span class="hljs-number">21</span>   <span class="hljs-number">4</span>*<span class="hljs-number">7</span>=<span class="hljs-number">28</span>   <span class="hljs-number">5</span>*<span class="hljs-number">7</span>=<span class="hljs-number">35</span>   <span class="hljs-number">6</span>*<span class="hljs-number">7</span>=<span class="hljs-number">42</span>   <span class="hljs-number">7</span>*<span class="hljs-number">7</span>=<span class="hljs-number">49</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">8</span>=<span class="hljs-number">8</span>   <span class="hljs-number">2</span>*<span class="hljs-number">8</span>=<span class="hljs-number">16</span>   <span class="hljs-number">3</span>*<span class="hljs-number">8</span>=<span class="hljs-number">24</span>   <span class="hljs-number">4</span>*<span class="hljs-number">8</span>=<span class="hljs-number">32</span>   <span class="hljs-number">5</span>*<span class="hljs-number">8</span>=<span class="hljs-number">40</span>   <span class="hljs-number">6</span>*<span class="hljs-number">8</span>=<span class="hljs-number">48</span>   <span class="hljs-number">7</span>*<span class="hljs-number">8</span>=<span class="hljs-number">56</span>   <span class="hljs-number">8</span>*<span class="hljs-number">8</span>=<span class="hljs-number">64</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">9</span>=<span class="hljs-number">9</span>   <span class="hljs-number">2</span>*<span class="hljs-number">9</span>=<span class="hljs-number">18</span>   <span class="hljs-number">3</span>*<span class="hljs-number">9</span>=<span class="hljs-number">27</span>   <span class="hljs-number">4</span>*<span class="hljs-number">9</span>=<span class="hljs-number">36</span>   <span class="hljs-number">5</span>*<span class="hljs-number">9</span>=<span class="hljs-number">45</span>   <span class="hljs-number">6</span>*<span class="hljs-number">9</span>=<span class="hljs-number">54</span>   <span class="hljs-number">7</span>*<span class="hljs-number">9</span>=<span class="hljs-number">63</span>   <span class="hljs-number">8</span>*<span class="hljs-number">9</span>=<span class="hljs-number">72</span>   <span class="hljs-number">9</span>*<span class="hljs-number">9</span>=<span class="hljs-number"><code class="language-hljs apache"><span class="hljs-attribute">i</span> = <span class="hljs-number">1</span>   # 外边一层循环控制行数<br><span class="hljs-attribute">while</span> i &lt;= <span class="hljs-number">9</span>:<br>    <span class="hljs-attribute">j</span> = <span class="hljs-number">1</span>   # 里面一层循环控制每一行中的列数<br>    <span class="hljs-attribute">while</span> j &lt;= i:<br>        <span class="hljs-attribute">mut</span> = j * i<br>        <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;%d*%d=%d&quot;</span> % (j, i, mut), end=<span class="hljs-string">&quot;   &quot;</span>)<br>        <span class="hljs-attribute">j</span> += <span class="hljs-number">1</span><br>    <span class="hljs-attribute">print</span>(<span class="hljs-string">&quot;&quot;</span>)<br>    <span class="hljs-attribute">i</span> += <span class="hljs-number">1</span><br><br><span class="hljs-comment">#######################输出#######################</span><br><br><span class="hljs-attribute">1</span>*<span class="hljs-number">1</span>=<span class="hljs-number">1</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">2</span>=<span class="hljs-number">2</span>   <span class="hljs-number">2</span>*<span class="hljs-number">2</span>=<span class="hljs-number">4</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">3</span>=<span class="hljs-number">3</span>   <span class="hljs-number">2</span>*<span class="hljs-number">3</span>=<span class="hljs-number">6</span>   <span class="hljs-number">3</span>*<span class="hljs-number">3</span>=<span class="hljs-number">9</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">4</span>=<span class="hljs-number">4</span>   <span class="hljs-number">2</span>*<span class="hljs-number">4</span>=<span class="hljs-number">8</span>   <span class="hljs-number">3</span>*<span class="hljs-number">4</span>=<span class="hljs-number">12</span>   <span class="hljs-number">4</span>*<span class="hljs-number">4</span>=<span class="hljs-number">16</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">5</span>=<span class="hljs-number">5</span>   <span class="hljs-number">2</span>*<span class="hljs-number">5</span>=<span class="hljs-number">10</span>   <span class="hljs-number">3</span>*<span class="hljs-number">5</span>=<span class="hljs-number">15</span>   <span class="hljs-number">4</span>*<span class="hljs-number">5</span>=<span class="hljs-number">20</span>   <span class="hljs-number">5</span>*<span class="hljs-number">5</span>=<span class="hljs-number">25</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">6</span>=<span class="hljs-number">6</span>   <span class="hljs-number">2</span>*<span class="hljs-number">6</span>=<span class="hljs-number">12</span>   <span class="hljs-number">3</span>*<span class="hljs-number">6</span>=<span class="hljs-number">18</span>   <span class="hljs-number">4</span>*<span class="hljs-number">6</span>=<span class="hljs-number">24</span>   <span class="hljs-number">5</span>*<span class="hljs-number">6</span>=<span class="hljs-number">30</span>   <span class="hljs-number">6</span>*<span class="hljs-number">6</span>=<span class="hljs-number">36</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">7</span>=<span class="hljs-number">7</span>   <span class="hljs-number">2</span>*<span class="hljs-number">7</span>=<span class="hljs-number">14</span>   <span class="hljs-number">3</span>*<span class="hljs-number">7</span>=<span class="hljs-number">21</span>   <span class="hljs-number">4</span>*<span class="hljs-number">7</span>=<span class="hljs-number">28</span>   <span class="hljs-number">5</span>*<span class="hljs-number">7</span>=<span class="hljs-number">35</span>   <span class="hljs-number">6</span>*<span class="hljs-number">7</span>=<span class="hljs-number">42</span>   <span class="hljs-number">7</span>*<span class="hljs-number">7</span>=<span class="hljs-number">49</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">8</span>=<span class="hljs-number">8</span>   <span class="hljs-number">2</span>*<span class="hljs-number">8</span>=<span class="hljs-number">16</span>   <span class="hljs-number">3</span>*<span class="hljs-number">8</span>=<span class="hljs-number">24</span>   <span class="hljs-number">4</span>*<span class="hljs-number">8</span>=<span class="hljs-number">32</span>   <span class="hljs-number">5</span>*<span class="hljs-number">8</span>=<span class="hljs-number">40</span>   <span class="hljs-number">6</span>*<span class="hljs-number">8</span>=<span class="hljs-number">48</span>   <span class="hljs-number">7</span>*<span class="hljs-number">8</span>=<span class="hljs-number">56</span>   <span class="hljs-number">8</span>*<span class="hljs-number">8</span>=<span class="hljs-number">64</span><br><span class="hljs-attribute">1</span>*<span class="hljs-number">9</span>=<span class="hljs-number">9</span>   <span class="hljs-number">2</span>*<span class="hljs-number">9</span>=<span class="hljs-number">18</span>   <span class="hljs-number">3</span>*<span class="hljs-number">9</span>=<span class="hljs-number">27</span>   <span class="hljs-number">4</span>*<span class="hljs-number">9</span>=<span class="hljs-number">36</span>   <span class="hljs-number">5</span>*<span class="hljs-number">9</span>=<span class="hljs-number">45</span>   <span class="hljs-number">6</span>*<span class="hljs-number">9</span>=<span class="hljs-number">54</span>   <span class="hljs-number">7</span>*<span class="hljs-number">9</span>=<span class="hljs-number">63</span>   <span class="hljs-number">8</span>*<span class="hljs-number">9</span>=<span class="hljs-number">72</span>   <span class="hljs-number">9</span>*<span class="hljs-number">9</span>=<span class="hljs-number">81</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>习题 2:</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre class=" language-hljs clean">for n <span class="hljs-keyword">in</span> list(range(<span class="hljs-number">1000</span>, <span class="hljs-number">9999</span>)):<br>    N = n * <span class="hljs-number">4</span><br>    nStr = str(n)<br>    NStr = str(N)<br><br>    <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">0</span>] == NStr[<span class="hljs-number">3</span>]:<br>        <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">1</span>] == NStr[<span class="hljs-number">2</span>]:<br>            <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">2</span>] == NStr[<span class="hljs-number">1</span>]:<br>                <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">3</span>] == NStr[<span class="hljs-number">0</span>]:<br>                    print(nStr, <span class="hljs-string">&#x27;* 4 =&#x27;</span>, NStr)<br>                    break<br><br>#####################输出#####################<br><br><span class="hljs-number">2178</span> * <span class="hljs-number">4</span> = <span class="hljs-number"><code class="language-hljs clean">for n <span class="hljs-keyword">in</span> list(range(<span class="hljs-number">1000</span>, <span class="hljs-number">9999</span>)):<br>    N = n * <span class="hljs-number">4</span><br>    nStr = str(n)<br>    NStr = str(N)<br><br>    <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">0</span>] == NStr[<span class="hljs-number">3</span>]:<br>        <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">1</span>] == NStr[<span class="hljs-number">2</span>]:<br>            <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">2</span>] == NStr[<span class="hljs-number">1</span>]:<br>                <span class="hljs-keyword">if</span> nStr[<span class="hljs-number">3</span>] == NStr[<span class="hljs-number">0</span>]:<br>                    print(nStr, <span class="hljs-string">&#x27;* 4 =&#x27;</span>, NStr)<br>                    break<br><br>#####################输出#####################<br><br><span class="hljs-number">2178</span> * <span class="hljs-number">4</span> = <span class="hljs-number">8712</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+
+                
+              </div>
+            
+            <div>
+
+              <!-- 赞赏码 -->
+              <hr>
+              <div style="margin-top:20px;text-align:center">
+                <div style="margin-bottom:10px;">如果这篇文章对你有帮助，或者想给我微小的工作一点点资瓷，请随意打赏。</div>
+                <div id="QR" style="display: block;">
+                  <div id="wechat" style="display:inline-block;margin-right:50px;">
+                    <img id="wechat_qr" src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/wechatpay.jpg" srcset="/img/loading.gif" lazyload alt="潘高 微信支付" style="width:150px; height:150px;">
+                    <p style="color:#159718">微信支付</p>
+                  </div>
+                  <div id="alipay" style="display:inline-block;">
+                    <img id="alipay_qr" src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/alipay.png" srcset="/img/loading.gif" lazyload alt="潘高 支付宝" style="width:150px; height:150px;">
+                    <p style="color:#217cfb">支付宝</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Python/" class="category-chain-item">Python</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Python/Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/" class="category-chain-item">Python入门到精通</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">#Python入门到精通</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Python3循环语句-Python入门到精通</div>
+      <div>https://blog.pangao.vip/Python3循环语句-Python入门到精通/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>潘高</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2019年10月25日 晚上</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年3月28日 下午</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Python3%E5%87%BD%E6%95%B0-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/" title="Python3函数-Python入门到精通">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Python3函数-Python入门到精通</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Python3%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5-Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/" title="Python3条件语句-Python入门到精通">
+                        <span class="hidden-mobile">Python3条件语句-Python入门到精通</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      <!-- google广告 -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- 横幅 - 留言板 -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-5317369003185250"
+    data-ad-slot="9014150860"
+    data-ad-format="auto"
+    data-full-width-responsive="true">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<br>
+<hr>
+<br>
+
+
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.14.1/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.14.1/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://comment.pangao.vip","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://unpkg.com/@waline/emojis@1.1.0/alus","https://unpkg.com/@waline/emojis@1.1.0/qq"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10,"avatar":"identicon","avatarCDN":"https://seccdn.libravatar.org/avatar/","avatarForce":false,"highlight":true},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>评论功能在允许 JavaScript 运行的环境下效果更佳哦</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <link rel="stylesheet" href="//at.alicdn.com/t/font_1765130_cg2uvt55y8.css">
+        </div>
+      </div>
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+
+  <!-- 一言 -->
+  <p id="hitokoto" style="color:blueviolet">即将出现一段不可描述的话...</p>
+  <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(response => response.json())
+      .then(data => {
+        const hitokoto = document.getElementById('hitokoto')
+        hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+  </script>
+
+  <!-- 网站运行时间统计 -->
+  <div>
+    <span id="timeDate">正在烧脑计算建站时间...</span>
+    <span id="times"></span>
+    <script>
+      var now = new Date();
+      function createtime() {
+        var grt = new Date("02/23/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+          hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+          mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+          snum = "0" + snum;
+        }
+        document.getElementById("timeDate").innerHTML = "本站已默默无闻运行&nbsp" + dnum + "&nbsp天";
+        document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+      }
+      setInterval("createtime()", 250);
+    </script>
+  </div>
+
+  
+    <div class="statistics">
+  
+  
+
+  
+    <!-- LeanCloud 统计UV -->
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        承蒙 
+          <span id="leancloud-site-uv"></span>
+           位朋友
+      </span>
+    
+    <!-- LeanCloud 统计PV -->
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        造访 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="/icp/blog.pangao.vip.html" target="_blank" rel="nofollow noopener">
+      猿ICP证19901222号
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+    <!-- cnzz Analytics Icon -->
+    <span id="cnzz_stat_icon_1278827075" style="display: none"></span>
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳哦</div>
+  </noscript>
+</body>
+</html>
