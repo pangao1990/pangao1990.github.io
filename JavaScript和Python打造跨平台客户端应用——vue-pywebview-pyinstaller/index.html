@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/favicon.jpg">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/favicon.jpg">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://pangao1990.gitee.io/images/favicon.jpg">
+  <link rel="icon" href="https://pangao1990.gitee.io/images/favicon.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="潘高的小站">
 <meta property="og:description" content="前言现如今，要说比较火的编程语言当属 JavaScript 和 Python 了，这两门语言都可以独立编写前端页面、后端服务器、手机 APP、电脑客户端等等，无所不能。不过，不同的编程语言有不同的侧重点。比如 JavaScript 写网页得心应手，Python 处理大数据信手拈来。那么，能不能取两者的优点，构建一个跨平台客户端框架呢？这就有了今天的主角：vue-pywebview-pyinstal">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/index/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller.png">
+<meta property="og:image" content="https://pangao1990.gitee.io/pic/index/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller.png">
 <meta property="article:published_time" content="2022-03-24T10:03:22.000Z">
-<meta property="article:modified_time" content="2023-03-28T07:38:20.368Z">
+<meta property="article:modified_time" content="2023-03-29T08:05:15.109Z">
 <meta property="article:author" content="潘高">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/index/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller.png">
+<meta name="twitter:image" content="https://pangao1990.gitee.io/pic/index/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller.png">
   
   
   
@@ -42,12 +42,6 @@
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -166,7 +160,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 40vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -290,9 +284,9 @@
   
 
 <div id="banner" class="banner" parallax=true
-    style="background: url('https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/banner/JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller.jpg') no-repeat center center; background-size: cover;">
+    style="background: url('https://pangao1990.gitee.io/pic/banner/JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -369,32 +363,8 @@
     
       
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-1">
-      
-
-    </div>
-
-    <div class="col-lg-9 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller</h1>
-            
-              <p class="note note-info">
-                
-                  
-                    本文最后更新于：2023年3月28日 下午
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>现如今，要说比较火的编程语言当属 JavaScript 和 Python 了，这两门语言都可以独立编写前端页面、后端服务器、手机 APP、电脑客户端等等，无所不能。不过，不同的编程语言有不同的侧重点。比如 JavaScript 写网页得心应手，Python 处理大数据信手拈来。那么，能不能取两者的优点，构建一个跨平台客户端框架呢？这就有了今天的主角：<a target="_blank" rel="noopener" href="https://github.com/pangao1990/vue-pywebview-pyinstaller">vue-pywebview-pyinstaller</a>。</p>
+<article class="page-content">
+  <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>现如今，要说比较火的编程语言当属 JavaScript 和 Python 了，这两门语言都可以独立编写前端页面、后端服务器、手机 APP、电脑客户端等等，无所不能。不过，不同的编程语言有不同的侧重点。比如 JavaScript 写网页得心应手，Python 处理大数据信手拈来。那么，能不能取两者的优点，构建一个跨平台客户端框架呢？这就有了今天的主角：<a target="_blank" rel="noopener" href="https://github.com/pangao1990/vue-pywebview-pyinstaller">vue-pywebview-pyinstaller</a>。</p>
 <h3 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h3><p><a target="_blank" rel="noopener" href="https://github.com/pangao1990/vue-pywebview-pyinstaller">vue-pywebview-pyinstaller</a> 基于 pywebview 和 PyInstaller 框架，构建 macOS 和 windows 平台的客户端。本应用的视图层支持 Vue、React、Angular、HTML 中的任意一种，业务层采用本地 Python。考虑到某些生物计算场景数据量大，数据私密，因此将数据上传到服务器计算，并不一定是最优解，选择采用本地 Python 也是一种不错的选择。不过，如果需要调用远程 API，本应用也是支持的。</p>
 <h5 id="应用优势"><a href="#应用优势" class="headerlink" title="应用优势"></a>应用优势</h5><ul>
 <li>视图层可使用任意一款你喜欢的前端框架，比如 Vue、React、Angular、HTML 等，迁移无压力</li>
@@ -408,33 +378,33 @@
 </ul>
 <h5 id="适用人群"><a href="#适用人群" class="headerlink" title="适用人群"></a>适用人群</h5><p>熟悉 Python3 和 任意一款前端框架，如 Vue、React、Angular、HTML 编程的程序员。</p>
 <h3 id="应用安装"><a href="#应用安装" class="headerlink" title="应用安装"></a>应用安装</h3><h4 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h4><ul>
-<li>npm8.0+ (<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/NodeJs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">NodeJs 安装教程</a>)</li>
-<li>Python3.6-3.8 (<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/Python%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85">Python 安装教程</a>)</li>
+<li>npm8.0+ (<a target="_blank" rel="noopener" href="https://pangao1990.gitee.io/NodeJs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">NodeJs 安装教程</a>)</li>
+<li>Python3.6-3.8 (<a target="_blank" rel="noopener" href="https://pangao1990.gitee.io/Python%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85">Python 安装教程</a>)</li>
 </ul>
-<h4 id="应用下载"><a href="#应用下载" class="headerlink" title="应用下载"></a>应用下载</h4><p>利用 git（<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/Git%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">git 安装教程</a>） 下载应用，如下所示：</p>
+<h4 id="应用下载"><a href="#应用下载" class="headerlink" title="应用下载"></a>应用下载</h4><p>利用 git（<a target="_blank" rel="noopener" href="https://pangao1990.gitee.io/Git%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">git 安装教程</a>） 下载应用，如下所示：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/pangao1990/</span>vue-pywebview-pyinstaller.git<br></code></pre></td></tr></table></figure>
 
 <p>或者，直接在我的 <a target="_blank" rel="noopener" href="https://github.com/pangao1990/vue-pywebview-pyinstaller">github</a> 下载。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 进入项目</span><br><span class="hljs-built_in">cd</span> vue-pywebview-pyinstaller<br></code></pre></td></tr></table></figure>
 
 <p>进入项目，项目清单如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>下载完毕后，运行初始化命令，程序会自动下载安装对应操作平台的所需依赖软件，如下所示：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 初始化</span><br>npm <span class="hljs-built_in">run</span> init<br></code></pre></td></tr></table></figure>
 
 <p>没报错信息，则初始化完成，如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-3.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-3.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <p>项目里多了一个 node_modules 文件夹，用于存放 npm 下载的包；多了一个 pyenv 文件夹，用于存放 Python 虚拟环境。</p>
 <h3 id="应用运行"><a href="#应用运行" class="headerlink" title="应用运行"></a>应用运行</h3><p>输入如下命令，即可启动应用：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">npm <span class="hljs-built_in">run</span> start<br></code></pre></td></tr></table></figure>
 
 <p>终端显示如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-4.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-4.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <p>同时，会启动一个客户端程序，如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-5.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-5.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <p>整体效果如下所示（gif 图片加载可能有点慢）：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-6.gif" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-6.gif" srcset="/img/loading.gif" lazyload alt="image"></p>
 <h3 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h3><h4 id="客户端引擎介绍"><a href="#客户端引擎介绍" class="headerlink" title="客户端引擎介绍"></a>客户端引擎介绍</h4><p>本应用基于 <a target="_blank" rel="noopener" href="https://pywebview.flowrl.com/">pywebview</a> 构建客户端。而 pywebview 构架构建客户端的原理是利用本地电脑自带的浏览器引擎驱动，模拟生成客户端。本质上还是网页，或者说是一个浏览器，但是感官上和本地客户端没有差别。</p>
 <p>那么，基于 pywebview 构架构建客户端的成败或质量，就与本地电脑的浏览器引擎息息相关了。</p>
 <h5 id="windows-系统"><a href="#windows-系统" class="headerlink" title="windows 系统"></a>windows 系统</h5><p>在 windows 系统上，大体上分为两类客户端引擎：正常模式和兼容模式。</p>
@@ -449,7 +419,7 @@
 <h5 id="macOS-系统"><a href="#macOS-系统" class="headerlink" title="macOS 系统"></a>macOS 系统</h5><p>macOS 系统的浏览器引擎就没有那么多版本了，由于 macOS 系统的封闭性，在 macOS 系统就只有一种 WebKit 引擎可用。</p>
 <p>不过，在 macOS 系统却存在另一个问题。那就是苹果自主研发的 M1 芯片。由于 windows 系统随处可见，我可以找很多电脑测试。mac 电脑我就只有一台 M1 芯片和一个 x86_64 芯片，做不了更多测试。总之，目前我这两台苹果电脑构建的客户端不能交叉使用，原因不明。</p>
 <h4 id="构建客户端-API"><a href="#构建客户端-API" class="headerlink" title="构建客户端 API"></a>构建客户端 API</h4><p>构建客户端的主程序是 main.py ，如下所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-7.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller-7.png" srcset="/img/loading.gif" lazyload alt="image"></p>
 <p>main.py 里面主要是依靠 webview.create_window 和 webview.start 这两个 API 来构建客户端。其他的一些 API，我也会在后面的教程中详细介绍。或者可以直接查看 <a target="_blank" rel="noopener" href="https://pywebview.flowrl.com/guide/api.html">pywebview 官网</a> 了解详情。</p>
 <h5 id="webview-create-window"><a href="#webview-create-window" class="headerlink" title="webview.create_window"></a>webview.create_window</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">webview.create_window(title, <span class="hljs-attribute">url</span>=<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attribute">html</span>=<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attribute">js_api</span>=None, <span class="hljs-attribute">width</span>=800, <span class="hljs-attribute">height</span>=600, \<br>                      <span class="hljs-attribute">x</span>=None, <span class="hljs-attribute">y</span>=None, <span class="hljs-attribute">resizable</span>=<span class="hljs-literal">True</span>, <span class="hljs-attribute">fullscreen</span>=<span class="hljs-literal">False</span>, \<br>                      min_size=(200, 100), <span class="hljs-attribute">hidden</span>=<span class="hljs-literal">False</span>, <span class="hljs-attribute">frameless</span>=<span class="hljs-literal">False</span>, \<br>                      <span class="hljs-attribute">minimized</span>=<span class="hljs-literal">False</span>, <span class="hljs-attribute">on_top</span>=<span class="hljs-literal">False</span>, <span class="hljs-attribute">confirm_close</span>=<span class="hljs-literal">False</span>, \<br>                      <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;#FFF&#x27;</span>)<br></code></pre></td></tr></table></figure>
 
@@ -526,172 +496,11 @@
 </ul>
 <hr>
 <p>更多编程教学请关注公众号：<strong>潘高陪你学编程</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/pic/%E6%BD%98%E9%AB%98%E9%99%AA%E4%BD%A0%E5%AD%A6%E7%BC%96%E7%A8%8B.jpg" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://pangao1990.gitee.io/pic/%E6%BD%98%E9%AB%98%E9%99%AA%E4%BD%A0%E5%AD%A6%E7%BC%96%E7%A8%8B.jpg" srcset="/img/loading.gif" lazyload alt="image"></p>
 <hr>
 
-                
-              </div>
-            
-            <div>
-
-              <!-- 赞赏码 -->
-              <hr>
-              <div style="margin-top:20px;text-align:center">
-                <div style="margin-bottom:10px;">如果这篇文章对你有帮助，或者想给我微小的工作一点点资瓷，请随意打赏。</div>
-                <div id="QR" style="display: block;">
-                  <div id="wechat" style="display:inline-block;margin-right:50px;">
-                    <img id="wechat_qr" src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/wechatpay.jpg" srcset="/img/loading.gif" lazyload alt="潘高 微信支付" style="width:150px; height:150px;">
-                    <p style="color:#159718">微信支付</p>
-                  </div>
-                  <div id="alipay" style="display:inline-block;">
-                    <img id="alipay_qr" src="https://cdn.jsdelivr.net/gh/pangao1990/pangao1990.github.io/images/alipay.png" srcset="/img/loading.gif" lazyload alt="潘高 支付宝" style="width:150px; height:150px;">
-                    <p style="color:#217cfb">支付宝</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Python/" class="category-chain-item">Python</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Python/JavaScript/" class="category-chain-item">JavaScript</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Python/JavaScript/Vue/" class="category-chain-item">Vue</a>
-  
-  
 
   
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Python/">#Python</a>
-      
-        <a href="/tags/JavaScript/">#JavaScript</a>
-      
-        <a href="/tags/Vue/">#Vue</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller</div>
-      <div>https://blog.pangao.vip/JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>潘高</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2022年3月24日 晚上</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>更新于</div>
-          <div>2023年3月28日 下午</div>
-        </div>
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
-                    <i class="iconfont icon-nc"></i>
-                  </span>
-                </a>
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
-                    <i class="iconfont icon-sa"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/%E8%AE%B0%E4%B8%80%E4%B8%AA%E5%9C%A8linux%E4%B8%8B%E7%BC%96%E7%A8%8B%E5%AE%B9%E6%98%93%E8%A2%AB%E5%BF%BD%E8%A7%86%E7%9A%84%E5%B0%8Fbug/" title="记一个在linux下编程容易被忽视的小bug">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">记一个在linux下编程容易被忽视的小bug</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2022%E5%B9%B42%E6%9C%88%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%8E%92%E8%A1%8C%E6%A6%9C%EF%BD%9CPython%E9%81%A5%E9%81%A5%E9%A2%86%E5%85%88/" title="2022年2月最受欢迎编程语言排行榜｜Python遥遥领先">
-                        <span class="hidden-mobile">2022年2月最受欢迎编程语言排行榜｜Python遥遥领先</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
   
   
     <article id="comments" lazyload>
@@ -743,55 +552,8 @@
   
 
 
-          </article>
-        </div>
-      </div>
-    </div>
+</article>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-<!-- Custom -->
 
 
     
@@ -975,97 +737,6 @@
   
 
 
-
-
-  
-<script>
-  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
 
 
   <script defer src="/js/leancloud.js" ></script>
