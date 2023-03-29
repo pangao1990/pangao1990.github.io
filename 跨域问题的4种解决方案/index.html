@@ -44,6 +44,12 @@
 
 
 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -161,7 +167,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 40vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -287,7 +293,7 @@
 <div id="banner" class="banner" parallax=true
     style="background: url('https://pangao1990.gitee.io/pic/banner/跨域问题的4种解决方案.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -364,8 +370,32 @@
     
       
 
-<article class="page-content">
-  <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>难以置信，我居然被跨域问题折磨了一上午。相信很多程序员都遇到过跨域问题，当然，解决方案也有很多种。但我今天尝试了无数种办法，依旧没有解决。直到最后我媳妇儿给了我个提示，会不会跨域问题只是表象，真正的 bug 在其他地方。后来，经过我仔细排查，终于发现原来是 PhalApi 框架中的一个小问题，引发了跨域报错（文末再说 PhalApi 框架中的问题是啥）。那我也借这个机会，来和大伙聊聊啥是跨域问题，和有哪些常见的解决方案。</p>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-1">
+      
+
+    </div>
+
+    <div class="col-lg-9 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">跨域问题的4种解决方案</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年3月29日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>难以置信，我居然被跨域问题折磨了一上午。相信很多程序员都遇到过跨域问题，当然，解决方案也有很多种。但我今天尝试了无数种办法，依旧没有解决。直到最后我媳妇儿给了我个提示，会不会跨域问题只是表象，真正的 bug 在其他地方。后来，经过我仔细排查，终于发现原来是 PhalApi 框架中的一个小问题，引发了跨域报错（文末再说 PhalApi 框架中的问题是啥）。那我也借这个机会，来和大伙聊聊啥是跨域问题，和有哪些常见的解决方案。</p>
 <h3 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h3><p>什么是快乐星球，呸，什么是跨域呢？</p>
 <p>简单来讲，跨域是指从一个域名的网页去请求另一个域名的资源。比如从百度(baidu.com)页面去请求我的博客(blog.pangao.vip)的资源。但由于有<strong>同源策略</strong>的关系，一般是不允许这么直接访问的。</p>
 <h3 id="什么是同源策略"><a href="#什么是同源策略" class="headerlink" title="什么是同源策略"></a>什么是同源策略</h3><p>一言蔽之，同源就是协议、域名和端口都相同。</p>
@@ -436,8 +466,157 @@
 <p><img src="https://pangao1990.gitee.io/pic/%E6%BD%98%E9%AB%98%E9%99%AA%E4%BD%A0%E5%AD%A6%E7%BC%96%E7%A8%8B.jpg" srcset="/img/loading.gif" lazyload alt="image"></p>
 <hr>
 
+                
+              </div>
+            
+            <div>
 
+              <!-- 赞赏码 -->
+              <hr>
+              <div style="margin-top:20px;text-align:center">
+                <div style="margin-bottom:10px;">如果这篇文章对你有帮助，或者想给我微小的工作一点点资瓷，请随意打赏。</div>
+                <div id="QR" style="display: block;">
+                  <div id="wechat" style="display:inline-block;margin-right:50px;">
+                    <img id="wechat_qr" src="https://pangao1990.gitee.io/images/wechatpay.jpg" srcset="/img/loading.gif" lazyload alt="潘高 微信支付" style="width:150px; height:150px;">
+                    <p style="color:#159718">微信支付</p>
+                  </div>
+                  <div id="alipay" style="display:inline-block;">
+                    <img id="alipay_qr" src="https://pangao1990.gitee.io/images/alipay.png" srcset="/img/loading.gif" lazyload alt="潘高 支付宝" style="width:150px; height:150px;">
+                    <p style="color:#217cfb">支付宝</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/JS/" class="category-chain-item">JS</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/JS/">#JS</a>
+      
+        <a href="/tags/Vue/">#Vue</a>
+      
+        <a href="/tags/PHP/">#PHP</a>
+      
+        <a href="/tags/Nginx/">#Nginx</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>跨域问题的4种解决方案</div>
+      <div>https://blog.pangao.vip/跨域问题的4种解决方案/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>潘高</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年9月15日 晚上</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年3月29日 下午</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/npminstall--global--save--save-dev%E7%9A%84%E5%8C%BA%E5%88%AB/" title="npm install --global --save --save-dev 的区别">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">npm install --global --save --save-dev 的区别</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E5%8F%AF%E8%83%BD%E6%98%AFPython%E4%B8%AD%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%AF%81%E8%A7%A3%E6%9E%90%E5%B7%A5%E5%85%B7%E2%80%94parseIdCard/" title="可能是Python中最好用的身份证解析工具—parseIdCard">
+                        <span class="hidden-mobile">可能是Python中最好用的身份证解析工具—parseIdCard</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
   
   
     <article id="comments" lazyload>
@@ -489,8 +668,55 @@
   
 
 
-</article>
+          </article>
+        </div>
+      </div>
+    </div>
 
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+<!-- Custom -->
 
 
     
@@ -674,6 +900,97 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
 
 
   <script defer src="/js/leancloud.js" ></script>

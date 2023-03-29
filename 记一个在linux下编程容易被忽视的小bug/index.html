@@ -42,6 +42,12 @@
 
 
 
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -159,7 +165,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 40vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -285,7 +291,7 @@
 <div id="banner" class="banner" parallax=true
     style="background: url('https://pangao1990.gitee.io/pic/banner/记一个在linux下编程容易被忽视的小bug.jpeg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -362,8 +368,32 @@
     
       
 
-<article class="page-content">
-  <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近在做新项目，好久没更新博客了。正巧今天朋友问了我一个 bug 怎么解决，今天就抽空把这个问题记录一下。</p>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-1">
+      
+
+    </div>
+
+    <div class="col-lg-9 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">记一个在linux下编程容易被忽视的小bug</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年3月29日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近在做新项目，好久没更新博客了。正巧今天朋友问了我一个 bug 怎么解决，今天就抽空把这个问题记录一下。</p>
 <h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><p>由于涉及到公司项目的源码，我就不贴出她给我看的代码截图了。这里我简化一下变量，只贴出关键部分。如下所示：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">my <span class="hljs-variable">$rootDir</span> = <span class="hljs-string">&#x27;.&#x27;</span>;<br>my <span class="hljs-variable">$time</span>=`<span class="hljs-built_in">date</span> <span class="hljs-string">&#x27;+%Y%m%d-%H%M%S&#x27;</span>`;<br><br>`<span class="hljs-built_in">mkdir</span> <span class="hljs-variable">$rootDir</span>/XX_<span class="hljs-variable">$time</span>`;<br><br><span class="hljs-built_in">chdir</span> <span class="hljs-string">&quot;<span class="hljs-variable">$rootDir</span>/XX_<span class="hljs-variable">$time</span>&quot;</span> or die <span class="hljs-string">&quot;cannot cd to <span class="hljs-variable">$rootDir</span>/XX_<span class="hljs-variable">$time</span> : <span class="hljs-variable">$_</span>&quot;</span>;<br></code></pre></td></tr></table></figure>
 
@@ -421,8 +451,160 @@
 <p><img src="https://pangao1990.gitee.io/pic/%E6%BD%98%E9%AB%98%E9%99%AA%E4%BD%A0%E5%AD%A6%E7%BC%96%E7%A8%8B.jpg" srcset="/img/loading.gif" lazyload alt="image"></p>
 <hr>
 
+                
+              </div>
+            
+            <div>
+
+              <!-- 赞赏码 -->
+              <hr>
+              <div style="margin-top:20px;text-align:center">
+                <div style="margin-bottom:10px;">如果这篇文章对你有帮助，或者想给我微小的工作一点点资瓷，请随意打赏。</div>
+                <div id="QR" style="display: block;">
+                  <div id="wechat" style="display:inline-block;margin-right:50px;">
+                    <img id="wechat_qr" src="https://pangao1990.gitee.io/images/wechatpay.jpg" srcset="/img/loading.gif" lazyload alt="潘高 微信支付" style="width:150px; height:150px;">
+                    <p style="color:#159718">微信支付</p>
+                  </div>
+                  <div id="alipay" style="display:inline-block;">
+                    <img id="alipay_qr" src="https://pangao1990.gitee.io/images/alipay.png" srcset="/img/loading.gif" lazyload alt="潘高 支付宝" style="width:150px; height:150px;">
+                    <p style="color:#217cfb">支付宝</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Linux/Perl/" class="category-chain-item">Perl</a>
+  
+  
 
   
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Perl/">#Perl</a>
+      
+        <a href="/tags/Linux/">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>记一个在linux下编程容易被忽视的小bug</div>
+      <div>https://blog.pangao.vip/记一个在linux下编程容易被忽视的小bug/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>潘高</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月19日 晚上</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年3月29日 下午</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/%E8%B6%85%E8%AF%A6%E7%BB%86%E6%B3%A8%E5%86%8COpenAI%E6%8E%A5%E5%8F%A3%E8%B4%A6%E5%8F%B7%E7%9A%84%E6%95%99%E7%A8%8B/" title="超详细注册OpenAI接口账号的教程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">超详细注册OpenAI接口账号的教程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/JavaScript%E5%92%8CPython%E6%89%93%E9%80%A0%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94vue-pywebview-pyinstaller/" title="JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller">
+                        <span class="hidden-mobile">JavaScript和Python打造跨平台客户端应用——vue-pywebview-pyinstaller</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
   
   
     <article id="comments" lazyload>
@@ -474,8 +656,55 @@
   
 
 
-</article>
+          </article>
+        </div>
+      </div>
+    </div>
 
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+<!-- Custom -->
 
 
     
@@ -659,6 +888,97 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.staticfile.org/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
 
 
   <script defer src="/js/leancloud.js" ></script>
