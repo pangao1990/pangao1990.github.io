@@ -1217,13 +1217,6 @@
 
   
   <url>
-    <loc>https://blog.pangao.vip/tags/Python/</loc>
-    <lastmod>2023-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.pangao.vip/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -1232,6 +1225,13 @@
   
   <url>
     <loc>https://blog.pangao.vip/tags/Mac/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/tags/Python/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1252,7 +1252,7 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/JS/</loc>
+    <loc>https://blog.pangao.vip/tags/HTML5%E6%9E%81%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1266,7 +1266,7 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/HTML5%E6%9E%81%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://blog.pangao.vip/tags/JS/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1308,13 +1308,6 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
-    <lastmod>2023-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.pangao.vip/tags/JavaScript/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -1323,6 +1316,13 @@
   
   <url>
     <loc>https://blog.pangao.vip/tags/Vue/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/tags/Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1420,27 +1420,20 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/tags/Nginx/</loc>
-    <lastmod>2023-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.pangao.vip/tags/Linux/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/</loc>
+    <loc>https://blog.pangao.vip/tags/Nginx/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
+  
+
   
   <url>
     <loc>https://blog.pangao.vip/categories/Mac%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</loc>
@@ -1450,21 +1443,7 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/JS/</loc>
-    <lastmod>2023-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.pangao.vip/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2023-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.pangao.vip/categories/Python/OpenAI/</loc>
+    <loc>https://blog.pangao.vip/categories/Python/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1478,7 +1457,21 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/OpenAI/ChatGPT/</loc>
+    <loc>https://blog.pangao.vip/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/categories/JS/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/categories/Python/OpenAI/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1499,7 +1492,7 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
+    <loc>https://blog.pangao.vip/categories/Python/OpenAI/ChatGPT/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1507,6 +1500,13 @@
   
   <url>
     <loc>https://blog.pangao.vip/categories/Python/JavaScript/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/categories/Python/Python%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1534,14 +1534,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/JavaScript/Vue/</loc>
+    <loc>https://blog.pangao.vip/categories/HTTPX/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/HTTPX/</loc>
+    <loc>https://blog.pangao.vip/categories/Python/JavaScript/Vue/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1576,13 +1576,6 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/Python/Word/</loc>
-    <lastmod>2023-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.pangao.vip/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -1590,14 +1583,14 @@
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/CSS/</loc>
+    <loc>https://blog.pangao.vip/categories/Python/Word/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.pangao.vip/categories/HTTPX/Python/</loc>
+    <loc>https://blog.pangao.vip/categories/CSS/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1612,6 +1605,13 @@
   
   <url>
     <loc>https://blog.pangao.vip/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.pangao.vip/categories/HTTPX/Python/</loc>
     <lastmod>2023-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
